@@ -1,6 +1,6 @@
 # TopoDiffUDA - Diffusion-Augmented Topology-Preserving UDA
 
-This is a **fully reproducible** PyTorch research codebase for:
+This is a **fully reproducible** PyTorch research codebase for the paper:
 **“Diffusion-Augmented Topology-Preserving Unsupervised Domain Adaptation for Segmentation.”**
 
 TopoDiffUDA implements diffusion-augmented, topology-preserving unsupervised domain adaptation for thin-structure segmentation.
