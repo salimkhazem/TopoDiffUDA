@@ -1,0 +1,5 @@
+experiment:
+  name: ablation_no_diffusion
+
+diffusion:
+  use: false

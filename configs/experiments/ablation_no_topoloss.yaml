@@ -1,0 +1,6 @@
+experiment:
+  name: ablation_no_topoloss
+
+uda:
+  topo_weight: 0.0
+  topo_cons_weight: 0.0

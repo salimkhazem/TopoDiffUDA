@@ -1,0 +1,7 @@
+experiment:
+  name: ablation_vary_gen_amount
+
+diffusion:
+  use: true
+  manifest_path: "outputs/diffusion_aug/{dataset}/default/manifest.json"
+  prob: 1.0

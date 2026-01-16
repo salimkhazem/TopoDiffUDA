@@ -1,0 +1,17 @@
+experiment:
+  name: main_full_method
+
+train:
+  epochs: 50
+
+uda:
+  domain_adv: true
+  pseudo_threshold: 0.8
+  topo_weight: 0.1
+  topo_cons_weight: 0.05
+
+
+diffusion:
+  use: true
+  manifest_path: "outputs/diffusion_aug/{dataset}/default/manifest.json"
+  prob: 1.0

@@ -1,0 +1,7 @@
+experiment:
+  name: ablation_no_pseudofilter
+
+uda:
+  pseudo_min_size: 0
+  pseudo_fill_holes: false
+  pseudo_max_skel_components: null
