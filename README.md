@@ -1,4 +1,4 @@
-# TopoDiffUDA (IJCAI/ICPR)
+# TopoDiffUDA (IJCAI/)
 
 TopoDiffUDA implements diffusion-augmented, topology-preserving unsupervised domain adaptation for thin-structure segmentation.
 
@@ -23,6 +23,7 @@ Set `TOPODIFFUDA_DATA` to your data root or place datasets under `../data` relat
 If you use HuggingFace retina datasets, set `TOPODIFFUDA_HF_CACHE` to the cache directory (e.g., `/mnt/storage_2_10T/skhazem/Projects/icpr_5/cache/hf`).
 
 Expected structures:
+
 - DRIVE: `data/DRIVE/training/images`, `data/DRIVE/training/1st_manual`, `data/DRIVE/test/images`, `data/DRIVE/test/1st_manual`
 - STARE: `data/STARE` images + `data/STARE/masks` or `data/STARE/labels`
 - CHASEDB1: `data/CHASEDB1` with image/mask files in one folder
@@ -67,7 +68,7 @@ python scripts/train.py --config configs/experiments/main_full_method.yaml \
 Example command template (exact):
 
 python scripts/train.py --config configs/experiments/main_full_method.yaml \
-  --dataset gta5_cityscapes --model deeplabv3p --seed 0 --log_tb
+ --dataset gta5_cityscapes --model deeplabv3p --seed 0 --log_tb
 
 ## UDA adaptation
 
@@ -116,6 +117,7 @@ outputs/
 ```
 
 ## Notes
+
 - Cityscapes is gated; download manually after registration.
 - If diffusion weights are missing, `generate_diffusion_aug.py` will print instructions and exit.
 - `scripts/check_topology_loss.py` provides minimal topology loss checks.
