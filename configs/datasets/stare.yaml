@@ -1,0 +1,8 @@
+dataset:
+  name: stare
+  image_size: [512, 512]
+  ignore_index: 255
+  hf_name: Zomba/STARE-structured-analysis-of-the-retina
+  hf_train_split: train
+  hf_test_split: validation
+  val_ratio: 0.2
