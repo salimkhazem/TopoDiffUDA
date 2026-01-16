@@ -1,0 +1,9 @@
+dataset:
+  name: gta5_cityscapes
+  source: gta5
+  target: cityscapes
+  image_size: [512, 512]
+  ignore_index: 255
+
+model:
+  num_classes: 19
