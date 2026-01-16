@@ -1,0 +1,5 @@
+dataset:
+  name: ssdd
+  image_size: [512, 512]
+  ignore_index: 255
+  disable_color_aug: true
