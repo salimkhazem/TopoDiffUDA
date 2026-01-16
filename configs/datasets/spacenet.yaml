@@ -1,0 +1,4 @@
+dataset:
+  name: spacenet
+  image_size: [512, 512]
+  ignore_index: 255
