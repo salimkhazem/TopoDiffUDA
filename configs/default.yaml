@@ -1,0 +1,51 @@
+seed: 0
+experiment:
+  name: main_full_method
+
+dataset:
+  name: drive
+  image_size: [512, 512]
+  ignore_index: 255
+  disable_color_aug: false
+
+model:
+  name: unet
+  num_classes: 2
+  in_channels: 3
+  base_channels: 32
+  pretrained: false
+
+train:
+  epochs: 50
+  batch_size: 4
+  lr: 0.0002
+  weight_decay: 0.0001
+  lr_step: 0
+  num_workers: 4
+  amp: true
+  grad_accum_steps: 1
+  deterministic: true
+  deterministic_warn_only: true
+  progress_bar: true
+
+uda:
+  pseudo_threshold: 0.8
+  pseudo_min_size: 64
+  pseudo_fill_holes: true
+  pseudo_max_skel_components: 8
+  pseudo_weight: 1.0
+  topo_weight: 0.1
+  topo_cons_weight: 0.05
+  consistency_weight: 0.1
+  domain_adv: false
+  domain_adv_weight: 0.1
+  use_ema: true
+  ema_decay: 0.999
+
+diffusion:
+  use: false
+  manifest_path: ""
+  prob: 1.0
+
+eval:
+  ece_bins: 10
