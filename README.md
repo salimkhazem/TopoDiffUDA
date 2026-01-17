@@ -31,7 +31,7 @@ uv pip install -r requirements.txt
 ## Data placement
 
 Set `TOPODIFFUDA_DATA` to your data root or place datasets under `../data` relative to this repo.
-If you use HuggingFace retina datasets, set `TOPODIFFUDA_HF_CACHE` to the cache directory (e.g., `/mnt/storage_2_10T/skhazem/Projects/icpr_5/cache/hf`).
+If you use HuggingFace retina datasets, set `TOPODIFFUDA_HF_CACHE` to the cache directory (e.g., `~/cache/hf`).
 
 Expected structures:
 
