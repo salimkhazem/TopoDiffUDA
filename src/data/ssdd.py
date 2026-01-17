@@ -3,6 +3,8 @@
 from pathlib import Path
 from typing import Dict, List, Tuple
 
+import torch
+
 from src.data.base_dataset import BaseSegDataset, cache_split_manifest, load_split_manifest
 from src.utils.paths import get_data_root
 
@@ -44,3 +46,8 @@ class SSDDDataset(BaseSegDataset):
         splits = get_splits()
         image_size = tuple(config["dataset"]["image_size"]) if config else None
         super().__init__("ssdd", splits[split], split, transforms=transforms, image_size=image_size)
+
+    def __getitem__(self, index: int):
+        sample = super().__getitem__(index)
+        sample["mask"] = (sample["mask"] > 0).long()
+        return sample
