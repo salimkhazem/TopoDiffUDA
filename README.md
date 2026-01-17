@@ -20,11 +20,12 @@ conda env create -f environment.yml
 conda activate topo-diffuda
 ```
 
-You can also use uv setup :
+You can also use uv setup (Recommanded) :
 
 ```bash
 uv venv
 source .venv/bin/activate
+uv pip install -r requirements.txt
 ```
 
 ## Data placement
