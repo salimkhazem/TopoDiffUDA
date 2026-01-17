@@ -20,6 +20,13 @@ conda env create -f environment.yml
 conda activate topo-diffuda
 ```
 
+You can also use uv setup :
+
+```bash
+uv venv
+source .venv/bin/activate
+```
+
 ## Data placement
 
 Set `TOPODIFFUDA_DATA` to your data root or place datasets under `../data` relative to this repo.
