@@ -16,6 +16,7 @@ from .cityscapes import CityscapesDataset
 from .spacenet_roads import SpaceNetRoads
 from .ssdd import SSDDDataset
 from .stare import STAREDataset
+from .synthia import SynthiaDataset
 
 
 DATASET_REGISTRY = {
@@ -27,6 +28,8 @@ DATASET_REGISTRY = {
     "gta5": GTA5Dataset,
     "cityscapes": CityscapesDataset,
     "gta5_cityscapes": GTA5Dataset,
+    "synthia": SynthiaDataset,
+    "synthia_cityscapes": SynthiaDataset,
     "ssdd": SSDDDataset,
 }
 
@@ -37,7 +40,7 @@ def _select_dataset_cls(name: str, cfg: Dict):
 
 
 def build_dataset(name: str, split: str, cfg: Dict, strong: bool = False):
-    if name == "gta5_cityscapes" and "target" in cfg.get("dataset", {}):
+    if name in {"gta5_cityscapes", "synthia_cityscapes"} and "target" in cfg.get("dataset", {}):
         name = cfg["dataset"]["target"]
     dataset_cls = _select_dataset_cls(name, cfg)
     image_size = tuple(cfg["dataset"]["image_size"])
