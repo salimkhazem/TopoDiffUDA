@@ -21,6 +21,7 @@ def main() -> None:
         "deepglobe": "Kaggle DeepGlobe Road Extraction dataset under data/deepglobe",
         "spacenet": "SpaceNet Roads requires preprocessing; run scripts/preprocess_spacenet.py to create data/spacenet/processed",
         "gta5": "GTA5 dataset under data/gta5/images and data/gta5/labels",
+        "synthia": "SYNTHIA-RAND-CITYSCAPES under data/SYNTHIA_RAND_CITYSCAPES with RGB/ and GT/LABELS/",
         "cityscapes": "Cityscapes requires registration; place leftImg8bit/gtFine under data/cityscapes",
         "ssdd": "SSDD dataset under data/ssdd/images and data/ssdd/masks",
     }
@@ -40,6 +41,8 @@ def main() -> None:
             if cand.exists():
                 present = True
                 break
+        if name == "synthia" and (data_root / "SYNTHIA_RAND_CITYSCAPES").exists():
+            present = True
         if name == "cityscapes" and (data_root / "leftImg8bit").exists():
             present = True
         status = "OK" if present else "MISSING"
