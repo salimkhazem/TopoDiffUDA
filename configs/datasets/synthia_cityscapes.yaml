@@ -1,0 +1,12 @@
+dataset:
+  name: synthia_cityscapes
+  source: synthia
+  target: cityscapes
+  image_size: [512, 512]
+  ignore_index: 255
+  label_map_path: configs/datasets/synthia_to_cityscapes_16.yaml
+  val_ratio: 0.1
+  test_ratio: 0.0
+
+model:
+  num_classes: 19
