@@ -1,0 +1,19 @@
+label_map:
+  # SYNTHIA-RAND-CITYSCAPES 16-class mapping to Cityscapes trainIds.
+  # Verify label order for your SYNTHIA release; edit if needed.
+  0: 255  # void
+  1: 10   # sky -> sky
+  2: 2    # building -> building
+  3: 0    # road -> road
+  4: 1    # sidewalk -> sidewalk
+  5: 4    # fence -> fence
+  6: 8    # vegetation -> vegetation
+  7: 5    # pole -> pole
+  8: 13   # car -> car
+  9: 7    # traffic sign -> traffic sign
+  10: 11  # person -> person
+  11: 18  # bicycle -> bicycle
+  12: 3   # wall -> wall
+  13: 6   # traffic light -> traffic light
+  14: 12  # rider -> rider
+  15: 17  # motorcycle -> motorcycle
